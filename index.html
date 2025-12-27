@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Питомник СибНИИСХоз</title>
+    <style>
+    </style>
+</head>
+<body>
+<header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+
+                <a href="#" class="logo", srs="logo.jpg">  СибНИИСХоз </a></href>
+                <nav class="main-nav">
+                    <ul class="nav mb-0">
+                        <li><a href="#" class="nav-link">Главная</a></li>
+                        <li><a href="#" class="nav-link">Каталог</a></li>
+                        <li><a href="#" class="nav-link">Гостевая книжка</a></li>
+                        <li><a href="#" class="nav-link">Контакты</a></li>
+                     
+                    </ul>
+                    <div>
+                        <a href="#" class="btn-login" onclick="openModal('loginModal')">Вход</a>
+                        <a href="#" class="btn-register" onclick="openModal('registerModal')">Регистрация</a>
+                    </div>
+                </nav>
+                
+            
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="list-unstyled">
+                    <li><a href="#" class="d-block py-2 text-dark text-decoration-none" onclick="closeMobileMenu()">Главная</a></li>
+                    <li><a href="#" class="d-block py-2 text-dark text-decoration-none" onclick="closeMobileMenu()">Каталог</a></li>
+                    <li><a href="#" class="d-block py-2 text-dark text-decoration-none" onclick="closeMobileMenu()">О питомнике</a></li>
+                    <li><a href="#" class="d-block py-2 text-dark text-decoration-none" onclick="closeMobileMenu()">Цены</a></li>
+                    <li><a href="#" class="d-block py-2 text-dark text-decoration-none" onclick="closeMobileMenu()">Контакты</a></li>
+                    <li><a href="#" class="d-block py-2 text-dark text-decoration-none" onclick="openModal('loginModal')">Вход</a></li>
+                    <li><a href="#" class="d-block py-2 text-dark text-decoration-none" onclick="openModal('registerModal')">Регистрация</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+<section class="slider-section">
+        <div class="container">
+            <h2 class="section-title">Лучшие предложения</h2>
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slide slide-1"> Специальные цены на плодовые деревья</div>
+                    <div class="slide slide-2"> Новые сорта ягодных кустарников</div>
+                    <div class="slide slide-3"> Декоративные культуры со скидкой 20%</div>
+                </div>
+                <button class="slider-btn prev" onclick="prevSlide()">‹</button>
+                <button class="slider-btn next" onclick="nextSlide()">›</button>
+                <div class="slider-dots">
+                    <div class="dot active" onclick="goToSlide(0)"></div>
+                    <div class="dot" onclick="goToSlide(1)"></div>
+                    <div class="dot" onclick="goToSlide(2)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Популярные категории</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <div style="height:180px;background:#8BC34A;display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;">
+                                 Зимняя прививка
+                            </div>
+                        </div>
+                        <div class="category-content">
+                            <h3>Зимняя прививка</h3>
+                            <p class="mb-2">Яблони, груши, сливы, абрикосы для сибирских условий.</p>
+                            <div class="text-primary">-> Смотреть каталог</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <div style="height:180px;background:#4CAF50;display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;">
+                                Описание сортов
+                            </div>
+                        </div>
+                        <div class="category-content">
+                            <h3>Описания сортов</h3>
+                            <p class="mb-2">Голубика, малина, яблоня, сморидина и тд.</p>
+                            <div class="text-primary">-> Смотреть каталог</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img class="foto" src="Приложение/sopyt-tovar-moghev3.jpg" >
+                            </div>
+                        </div>
+                        <div class="category-content">
+                            <h3>Декоративные изделия</h3>
+                            <p class="mb-2">Разные фигуру животных из древесины.</p>
+                            <div class="text-primary">-> Смотреть каталог</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+ <section class="info-section">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="info-card">
+                        <div class="info-icon"></div>
+                        <h3>Научный подход</h3>
+                        <p>Растения выращиваются с применением научных разработок.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="info-card">
+                        <div class="info-icon"></div>
+                        <h3>Качество гарантировано</h3>
+                        <p>Здоровые, сильные саженцы с развитой корневой системой.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="info-card">
+                        <div class="info-icon"></div>
+                        <h3>Удобная доставка</h3>
+                        <p>Доставляем по Омску и области, отправляем в регионы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-4 mb-3">
+                    <div class="footer-logo"> СибНИИСХоз</div>
+                    <p class="mb-3" style="color:rgba(255,255,255,0.8);">Питомник растений с 1945 года. Саженцы для сибирских условий. </p>
+                    <div class="contact-info">
+                        <p> г. Омск, Пр. Королева, 28А</p>
+                        <p> Консультант: 48-26-90</p>
+                        <p> ОПТ: 8-913-644-10-56 "Андрей"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <h4>Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Плодовые деревья</a></li>
+                        <li><a href="#">Ягодные кустарники</a></li>
+                        <li><a href="#">Декоративные растения</a></li>
+                        <li><a href="#">Хвойные культуры</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <h4>Полезные ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">О питомнике</a></li>
+                        <li><a href="#">Цены</a></li>
+                        <li><a href="#">Советы по посадке</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Питомник растений СибНИИСХоз</div>
+        </div>
+    </footer>
+
+ <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Вход</h3>
+                <button class="btn-close" onclick="closeModal('loginModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="event.preventDefault(); closeModal('loginModal');">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Email или логин" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Пароль" required>
+                    </div>
+                    <button type="submit" class="btn-register w-100">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Регистрация</h3>
+                <button class="btn-close" onclick="closeModal('registerModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="event.preventDefault(); closeModal('registerModal');">
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-2">
+                            <input type="text" class="form-control" placeholder="Имя" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Фамилия" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Пароль" required>
+                    </div>
+                    <button type="submit" class="btn-register w-100">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const slider = document.getElementById('slider');
+        
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+        
+        setInterval(nextSlide, 5000);
+        
+ 
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('active');
+        }
+        
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            closeMobileMenu();
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+        
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+            }
+        });
+        
+        let lastScrollTop = 0;
+        const header = document.getElementById('mainHeader');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+        
+        function checkScreenSize() {
+            const nav = document.querySelector('.main-nav');
+            if (window.innerWidth < 992) {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                closeMobileMenu();
+            }
+        }
+        
+        window.addEventListener('resize', checkScreenSize);
+        checkScreenSize();
+    </script>
+</body>
+</html>
+
+    
